@@ -29,7 +29,7 @@ Práce má srozumitelný experimentální výsledek: v připravených scénách 
 ## Co bylo upraveno
 
 - Springer `sn-jnl`, autor–rok, nečíslované nadpisy, průběžná čísla řádků vlevo, DOI jako celé odkazy; pět klíčových slov a abstrakt v požadovaném rozsahu.
-- Název výslovně uvádí laboratorní studii a akumulace mikroplastů. Zachováno pořadí autorů, afiliace, výsledky, původní rovnice a citované práce.
+- Zachován původní název článku, pořadí autorů, afiliace, výsledky, původní rovnice a citované práce. Název navržený při první redakční úpravě byl na základě připomínky autora vrácen na původní znění.
 - Odstraněna Elsevier front matter a highlights, sjednoceny declarations. Potlačeno tvrzení o statistické signifikanci tam, kde nejsou uvedeny testy.
 - Zpřesněna interpretace RMS, prostorového SD, AoLP a nepřenositelnosti výsledků přímo do terénu. Neprovedena žádná nová experimentální analýza.
 - Grafy zvětšeny pro čitelnost; upravena pouze známá chyba symbolu v jedné legendě.

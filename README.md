@@ -1,4 +1,4 @@
-# LWIR polarization of microplastic accumulations and oil layers
+# Distinguishing microplastic and oil pollutants at the water surface using multi-angle LWIR polarization imaging
 
 Manuscript preparation for **Environmental Monitoring and Assessment**, 20 October 2026.
 
