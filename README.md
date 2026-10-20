@@ -1,31 +1,18 @@
 # Distinguishing microplastic and oil pollutants at the water surface using multi-angle LWIR polarization imaging
 
-Manuscript preparation for **Environmental Monitoring and Assessment**, 20 October 2026.
-
-The original Elsevier version remains available in git history at commit `9b82d2a`. The default main document is now `manuscript.tex` using Springer Nature `sn-jnl` with author–year citations.
-
-**Before submission:** read [the scientific and author checks](submission/author-checks.md). The repository contains manuscript sources and figures, not raw measurements or analysis code. Successful compilation does not validate the radiometric processing or numerical results. The required confirmation of ethical responsibilities still needs to be inserted after the authors have actually reviewed and confirmed it.
-
-## Files
+Springer Nature `sn-jnl` template with the `sn-apa` bibliography style. Main file: `manuscript.tex`. Compiler: **pdfLaTeX**.
 
 - [Manuscript PDF](submission/manuscript-ema.pdf)
-- [Flat source ZIP](submission/ema-source.zip), prepared for the Springer submission system
-- [Cover letter PDF](submission/cover-letter.pdf) and [editable source](submission/cover-letter.tex)
-- [Scientific checks and changes](submission/author-checks.md), in Czech
-- [Journal options and verified OA conditions](submission/journal-options.md), in Czech
-- [Template provenance](submission/template-provenance.md)
-- [Build and editorial validation](submission/validation.md)
+- [Submission source ZIP](submission/ema-source.zip)
 
-## Build
-
-Use a current TeX Live installation or Overleaf with pdfLaTeX. Required tools: `pdflatex`, `bibtex`, `latexmk`, Python 3, and GNU Make. LaTeX packages include `apacite`, `natbib`, `amsmath`, `amssymb`, `graphicx`, `booktabs`, `tabularx`, `tikz`, `upgreek`, `lineno`, `placeins`, and the dependencies loaded by `sn-jnl`. On Debian/Ubuntu a suitable installation includes `latexmk texlive-latex-extra texlive-fonts-recommended texlive-pictures texlive-bibtex-extra`.
+Upload the source ZIP to Overleaf and select `manuscript.tex` as the main document. For a local TeX Live installation with `apacite` installed:
 
 ```sh
-make package
+latexmk -pdf -outdir=build manuscript.tex
 ```
 
-This compiles both documents with shell escape disabled, copies the PDFs to `submission/`, and builds `submission/ema-source.zip`. The ZIP contains the manuscript, bibliography (`.bib` and compiled `.bbl`), Springer style files, and the referenced figures, all in one directory. It excludes internal notes, build logs, the cover letter, and unused Elsevier files. The `.bbl` accompanies the `.bib` for build compatibility; the main source uses the ordinary bibliography command.
+The manuscript text and source comments are retained from commit `dc2b61e`. All figures are the original, unedited files from `9b82d2a`. The original highlights are retained as an unnumbered list. The bibliography has only a technical URL-protection adjustment needed for compilation.
 
-For Overleaf, upload `submission/ema-source.zip`, choose `manuscript.tex` as the main document, and select pdfLaTeX. The cover letter is a separate document. Regenerate the PDFs and ZIP after changing any text or figure.
+The source ZIP contains the manuscript, `.bib` and `.bbl` bibliography files, Springer class and bibliography style, and figures in one directory. No custom build scripts are required.
 
-No new experimental results, inferred sample sizes, or invented declarations were added. Numerical values and the original harmonic estimator were retained pending the checks listed above. Only the angular-mean label in the final AoLP plot was corrected; `scripts/correct-aolp-legend.py` records that vector-only correction and requires PyMuPDF and a DejaVu Sans font. It is not part of the routine manuscript build.
+Template files are unmodified copies from [the class mirror](https://github.com/iftaken/anor-template/blob/dfeb5372e9211ef50b8d46023e64221f4a8c8de8/sn-jnl.cls) and [the bibliography-style mirror](https://github.com/DanySK/template-latex-springer-nature-sn-jnl/blob/52c1a7e8bd945b754fabf0cc75d6823dd2917f84/sn-apacite.bst). The [official Springer template ZIP](https://www.springernature.com/gp/authors/campaigns/latex-author-support) could not be downloaded here, so identity with that ZIP has not been independently verified.

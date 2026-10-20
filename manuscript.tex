@@ -1,8 +1,9 @@
 
 %% Scientific data, equations, and citation mapping retained.
 
-\documentclass[preprint,12pt,authoryear]{elsarticle}
+\documentclass[pdflatex,sn-apa]{sn-jnl}
 
+\usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs}
@@ -13,52 +14,47 @@
 \usetikzlibrary{arrows.meta}
 \usepackage{url}
 
-\journal{Journal of Water Process Engineering}
+\setcounter{secnumdepth}{0}
 
 \begin{document}
 
-\begin{frontmatter}
 
 \title{Distinguishing microplastic and oil pollutants at the water surface using multi-angle LWIR polarization imaging}
 
 
-\author[ctu]{Luk\'a\v{s} Krauz\corref{cor1}}
-\ead{krauzluk@fel.cvut.cz}
-\author[ctu]{Artem Efremov}
-\author[ctu]{Milo\v{s} Kl\'ima}
-\author[ctu]{Jan Bedn\'a\v{r}}
-\author[ctu]{Petr P\'ata}
+\author*[1]{\fnm{Luk\'a\v{s}} \sur{Krauz}}\email{krauzluk@fel.cvut.cz}
+\author[1]{\fnm{Artem} \sur{Efremov}}
+\author[1]{\fnm{Milo\v{s}} \sur{Kl\'ima}}
+\author[1]{\fnm{Jan} \sur{Bedn\'a\v{r}}}
+\author[1]{\fnm{Petr} \sur{P\'ata}}
 
-\cortext[cor1]{Corresponding author}
+\affil[1]{\orgdiv{Department of Radioelectronics, Faculty of Electrical Engineering},
+\orgname{Czech Technical University in Prague},
+\orgaddress{\street{Technick\'a 2}, \city{Prague 6}, \postcode{166 27}, \country{Czech Republic}}}
 
-\affiliation[ctu]{organization={Department of Radioelectronics, Faculty of Electrical Engineering, Czech Technical University in Prague},
-    addressline={Technick\'a 2},
-    city={Prague 6},
-    postcode={166 27},
-    country={Czech Republic}}
-
-\begin{abstract}
+\abstract{
 Pollution of the water surface by microplastics and oils is a significant problem and requires complementary imaging methods for their fast identification. Among these new methods, polarization imaging can be considered a promising modality. Therefore, this paper assesses the use of multi-angle long-wave infrared (LWIR) polarization imaging for distinguishing selected microplastics, oils, and the water surface under active illumination. Nine plastic materials and five oils were measured at five illumination and observation geometries using a rotating linear analyzer. The degree of linear polarization (DoLP) and angle of linear polarization (AoLP) were evaluated for the individual samples. The main difference was observed in DoLP. The RMS DoLP of the microplastic group remained within the range $5.12\times10^{-4}$--$6.77\times10^{-4}$, while the RMS DoLP of the oil group increased from $1.85\times10^{-2}$ to $1.18\times10^{-1}$ toward larger illumination and observation angles. In terms of DoLP, the water-surface reference remained between the two pollutant groups for all five geometries. Control active illumination measurements also showed substantially higher DoLP for water and vegetable oil with active illumination than with the source blocked, while polypropylene remained within the same very low DoLP range for both illumination conditions. The AoLP characteristics showed substantially greater overlap between the pollutant groups. Under the investigated laboratory conditions, DoLP therefore provided a clear distinction among the investigated microplastics, the water-surface reference, and the oil layers, while AoLP provided weaker separation.
 
-\end{abstract}
+}
 
-\begin{highlights}
+
+
+\keywords{microplastics, oils, water pollution, LWIR, DoLP, polarization imaging}
+
+
+
+
+\linenumbers
+\maketitle
+
+\section*{Highlights}
+\begin{itemize}
 \item DoLP distinguished selected microplastics, water, and oil layers.
 \item Investigated microplastics remained below the water-reference DoLP.
 \item All investigated oils remained above the water-reference DoLP.
 \item Active LWIR illumination increased DoLP for water and vegetable oil.
 \item AoLP overlapped between the microplastic and oil groups.
-\end{highlights}
-
-\begin{keyword}
-microplastics \sep oils \sep water pollution \sep LWIR \sep DoLP \sep polarization imaging
-\end{keyword}
-
-\end{frontmatter}
-
-
-
-\linenumbers
+\end{itemize}
 
 % ------------------------------------------------------------------
 \section{Introduction}
@@ -602,6 +598,8 @@ This paper presented a multi-angle LWIR polarization imaging assessment of micro
 In addition, control measurements showed that active LWIR illumination produced a substantially higher DoLP response for the water-surface reference and the representative of the oil group, while the microplastic representative remained within the same very low range of DoLP under active illumination and with the source blocked. The low DoLP of the microplastic samples should therefore be interpreted as the response of the complete particle--water-surface scene, not as a validated polarization signature of the individual polymers. AoLP did not provide a comparable separation between the pollutant groups and should be considered a secondary parameter in the future experiments. Under the investigated laboratory conditions, DoLP provided the clearest distinction among the prepared microplastics, the water-surface reference, and the oils. Future work should focus on particle surface coverage, particle-size distribution, thinner oil layers, realistic water-surface conditions, and the transition to real environmental conditions. Given the scale of ongoing oil and microplastic contamination of aquatic surfaces, the demonstrated DoLP-based separation under controlled conditions supports further investigation of LWIR DoLP as a complementary parameter for optical monitoring of water-surface pollution. 
 
 
+\backmatter
+
 \section*{CRediT authorship contribution statement}
 
 Luk\'a\v{s} Krauz: Conceptualization, Methodology, Investigation, Formal analysis, Visualization, Validation, Writing -- original draft, Writing -- review and editing.
@@ -633,7 +631,6 @@ The authors gratefully acknowledge Ondřej Ballada and Česmír Bárta from BBT 
 Data will be made available on request.
 
 
-\bibliographystyle{elsarticle-harv}
 \bibliography{cas-refs}
 
 \end{document}
